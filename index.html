@@ -7,7 +7,7 @@
 $(function () {
     var code = GetRequest("code");
 	
-	alert(code);
+	//alert(code);
 	if(code!="")
 	{
 		$.ajax({
@@ -15,10 +15,12 @@ $(function () {
 		   url: "https://api.versioned.xyz/jumpurls",
 		   data: { code: 11 },
 		   error: function (data) { //发生错误时
-			//    debugger;
+			    debugger;
+			   console.log(data);
 		   },
 		   success: function (data) { //成功返回时
-			   debugger;
+			debugger;
+			console.log(data);
 			$("#itemTree").html(data);
 			
 		   }
