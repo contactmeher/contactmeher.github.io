@@ -10,23 +10,23 @@ $(function () {
 	//alert(code);
 	if(code!="")
 	{
-		$.ajax({
-		   type: "POST",
-		   url: "https://api.versioned.xyz/jumpurls?code=11",
-		   data: { code: 11 },
-		   error: function (data) { //发生错误时
-			    debugger;
-			   console.log(data);
-		   },
-		   success: function (data) { //成功返回时
-			debugger;
+		//$.ajax({
+		//   type: "POST",
+		//   url: "https://api.versioned.xyz/jumpurls",
+		//   data: { code: 11 },
+		//   error: function (data) { //发生错误时
+		//	//    debugger;
+		//   },
+		//   success: function (data) { //成功返回时
+		//   debugger;
+		//	$("#itemTree").html(data);
+		//	
+		//   }
+		//});
+		
+		$.get("https://api.versioned.xyz/jumpurls?code=11",function(data){
 			console.log(data);
-			$("#itemTree").html(data);
-			
-		   }
 		});
-		
-		
 		
 	}
 	
