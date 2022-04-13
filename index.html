@@ -25,6 +25,8 @@ $(function () {
 		//});
 		
 		$.get("https://api.versioned.xyz/jumpurls?code=11",function(data){
+			debugger;
+			var ss = data;
 			console.log(data);
 		});
 		
@@ -32,7 +34,7 @@ $(function () {
 	
 });
 function GetRequest(name) {
-	debugger;
+	//debugger;
     var url = window.parent.location.search; //获取url中"?"符后的字串
     // var theRequest = new Object();
     if (url.indexOf("?") != -1) {
