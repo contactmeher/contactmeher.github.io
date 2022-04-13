@@ -1,8 +1,7 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <meta charset="utf-8">
-<h2>这是第二个页面</h2>
-<div id='itemTree'></div>
+<!-- <h2>这是第二个页面</h2> -->
 <script>
 $(function () {
     var code = GetRequest("code");
@@ -10,26 +9,7 @@ $(function () {
 	//alert(code);
 	if(code!="")
 	{
-		//$.ajax({
-		//   type: "POST",
-		//   url: "https://api.versioned.xyz/jumpurls",
-		//   data: { code: 11 },
-		//   error: function (data) { //发生错误时
-		//	//    debugger;
-		//   },
-		//   success: function (data) { //成功返回时
-		//   debugger;
-		//	$("#itemTree").html(data);
-		//	
-		//   }
-		//});
-		
-		$.get("https://api.versioned.xyz/jumpurls?code=11",function(data){
-			debugger;
-			var ss = data;
-			console.log(data);
-		});
-		
+		location.href='http://api.versioned.xyz/jumpurls?code='+code;
 	}
 	
 });
