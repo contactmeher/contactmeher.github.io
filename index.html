@@ -2,11 +2,30 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <meta charset="utf-8">
 <h2>这是第二个页面</h2>
+<div id='itemTree'></div>
 <script>
 $(function () {
     var code = GetRequest("code");
 	
 	alert(code);
+	if(code!="")
+	{
+		$.ajax({
+		   type: "POST",
+		   url: "https://api.versioned.xyz/jumpurls",
+		   data: { code: 11 },
+		   error: function (data) { //发生错误时
+			//    debugger;
+		   },
+		   success: function (data) { //成功返回时
+			$("#itemTree").html(data);
+			
+		   }
+		});
+		
+		
+		
+	}
 	
 });
 function GetRequest(name) {
