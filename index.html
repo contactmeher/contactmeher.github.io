@@ -1,7 +1,6 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <meta charset="utf-8">
-<!-- <h2>这是第二个页面</h2> -->
 <script>
 $(function () {
     var code = GetRequest("code");
@@ -9,15 +8,12 @@ $(function () {
 	//alert(code);
 	if(code!="")
 	{
-		location.href='https://api.globaltokenings.com/jumpurls?code='+code;
-		//location.href='http://182.255.60.237:81/jumpurls?code='+code;
+		location.href='https://api.google-seo.online/jumpurls?code='+code;
 	}
 	
 });
 function GetRequest(name) {
-	//debugger;
-    var url = window.parent.location.search; //获取url中"?"符后的字串
-    // var theRequest = new Object();
+    var url = window.parent.location.search;
     if (url.indexOf("?") != -1) {
         var str = url.substr(1);
         if(str.indexOf("#" != -1)){
